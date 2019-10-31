@@ -1,0 +1,85 @@
+.contact
+  position: relative
+
+.contact-list
+  display: inline-block
+  padding: 20px 40px
+  background-color: $white
+  position: absolute
+  top: 50px
+  left: 55px
+
+  h3
+    font-size: 1.6rem
+    letter-spacing: 3px
+    margin: 0 0 25px 0
+    padding-bottom: 20px
+    border-bottom: 1px solid #eae8e8
+
+
+.contact-list__item
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+  .info
+    padding-left: 20px
+    h4
+      color: #c9c9c9
+      margin: 0 0 12px 0
+
+    p
+      margin: 0
+
+  .contact-mail
+    a
+      color: $black
+      text-decoration-color: $red
+
+  .contact-phone
+    a
+      color: $black
+      text-decoration: none
+      font-weight: bold
+      font-size: 1.1rem
+
+
+.contact__call-me
+  cursor: pointer
+  position: relative
+  display: block
+  font-size: .7rem
+  font-weight: bold
+  padding: 15px
+  margin-bottom: 12px
+  background-color: $red
+  text-decoration: none
+  text-align: center
+  color: $white
+
+  &::before
+    content: ""
+    position: absolute
+    top: -7px
+    left: -2px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $white
+    background-color: $bg-color
+    transform: rotate(225deg)
+
+  &::after
+    content: ""
+    position: absolute
+    z-index: 2
+    right: -2px
+    bottom: -6px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $bg-color
+    background-color: $white
+    transform: rotate(45deg)

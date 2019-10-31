@@ -1,0 +1,69 @@
+.services
+  h2
+    text-align: center
+    font-size: 2.8rem
+    font-weight: 100
+    margin-bottom: 4rem
+
+.services-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  h3
+    margin: 0 0 8% 0
+
+  p
+    margin: 0 0 8% 0
+
+.services-list__item
+  flex-basis: 43%
+  background-color: $white
+  padding: 3%
+  border-radius: 10px
+  margin-bottom: 3%
+
+.services-list__item-price
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.services-list__item-price-value
+  font-size: 2rem
+  color: $red
+
+.services-list__item-price-list
+  position: relative
+  background-color: $yellow
+  padding: 3% 5%
+  cursor: pointer
+
+  &:hover
+    background-color: $black
+    color: $white
+
+  &::before
+    content: ""
+    position: absolute
+    top: -7px
+    left: -2px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $white
+    background-color: $white
+    transform: rotate(225deg)
+
+  &::after
+    content: ""
+    position: absolute
+    right: -3px
+    bottom: -7px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $white
+    background-color: $white
+    transform: rotate(45deg)

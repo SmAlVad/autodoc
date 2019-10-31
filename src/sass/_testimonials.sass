@@ -1,0 +1,77 @@
+.testimonials
+  margin-bottom: 6%
+
+  h2
+    text-align: center
+    font-size: 2.8rem
+    font-weight: 100
+    margin-bottom: 4rem
+
+.testimonials-slider
+
+.testimonials-slider__item
+  display: flex
+  justify-content: space-between
+
+.testimonials-slider__item-image
+  flex-basis: 49%
+  position: relative
+
+.testimonials-slider__item-image-wrapper
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    top: -7px
+    left: -2px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $bg-color
+    background-color: $bg-color
+    transform: rotate(225deg)
+
+  &::after
+    content: ""
+    position: absolute
+    z-index: 2
+    right: -2px
+    bottom: -4px
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $bg-color
+    background-color: $bg-color
+    transform: rotate(45deg)
+
+  img
+    width: 100%
+
+.testimonials-slider__item-image-text
+  position: absolute
+  bottom: 3px
+  width: 90%
+  padding: 5%
+  z-index: 1
+  background-color: rgba(0, 0, 0, .8)
+  color: $white
+  font-size: 1.8rem
+
+
+.testimonials-slider__item-image-car
+  position: absolute
+  top: 45px
+  left: -15px
+  background-color: $yellow
+  padding: 10px 20px
+  z-index: 1
+
+
+.testimonials-slider__item-description
+  flex-basis: 49%
+
+  p
+    line-height: 2

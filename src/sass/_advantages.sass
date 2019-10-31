@@ -1,0 +1,32 @@
+.advantages
+  margin-bottom: 6%
+
+  h2
+    text-align: center
+    font-size: 2.8rem
+    font-weight: 100
+    margin-bottom: 4rem
+
+.advantages-list
+  display: flex
+  justify-content: space-between
+
+.advantages-list__item
+  padding: 3%
+  background-color: $white
+  border-radius: 5px
+  flex-basis: 26%
+  text-align: center
+  h3
+    text-transform: uppercase
+    margin: 13% 0 0 0
+
+@media screen and (max-width: 1024px)
+  .advantages-list
+    flex-wrap: wrap
+
+  .advantages-list__item
+    padding: 5%
+    flex-basis: 90%
+    margin-bottom: 3%
+

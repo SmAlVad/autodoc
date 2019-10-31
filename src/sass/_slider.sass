@@ -1,0 +1,147 @@
+.main-slider
+  position: relative
+  margin-bottom: 5rem
+
+  .arrow
+    top: 40%
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #e0e0e0
+    width: 45px
+    height: 45px
+    cursor: pointer
+
+  .left-arrow
+    &::before
+      content: ""
+      position: absolute
+      top: -7px
+      left: -2px
+      width: 0
+      height: 0
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      border-left: 10px solid $bg-color
+      background-color: $bg-color
+      transform: rotate(225deg)
+
+  .right-arrow
+    right: 0
+    &::before
+      content: ""
+      position: absolute
+      right: -2px
+      bottom: -7px
+      width: 0
+      height: 0
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      border-left: 10px solid $bg-color
+      background-color: $bg-color
+      transform: rotate(45deg)
+
+    img
+      transform: rotate(180deg)
+
+  .active-arrow
+    background-color: $red
+
+
+.slide__1
+  img
+    display: block
+    margin: auto
+
+  .slide__1-title
+    display: flex
+    justify-content: space-between
+    margin-bottom: 3rem
+
+    div
+      font-size: 2.5rem
+
+.slide__1-title-price
+  position: relative
+
+  .slide__1-title-price-value
+    padding: 1rem 1.5rem
+    color: $white
+    background-color: $red
+
+    &::after
+      content: ""
+      position: absolute
+      right: -3px
+      bottom: 4px
+      width: 0
+      height: 0
+      border-top: 15px solid transparent
+      border-bottom: 15px solid transparent
+      border-left: 15px solid $bg-color
+      background-color: $bg-color
+      transform: rotate(45deg)
+
+  img
+    display: block
+    margin: auto
+
+.slide__1-form
+  padding-left: 2rem
+  background-color: $white
+  border-radius: 10px
+  width: 80%
+  margin: auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  input
+    border: none
+
+    &[name="name"]
+      border-bottom: 1px solid $red
+      color: $black
+
+.slide__1-form-submit
+  position: relative
+  background-color: $red
+  width: 80px
+  height: 110px
+
+  &::before
+    content: ""
+    position: absolute
+    top: 45px
+    left: 30px
+    background-image: url("/img/arrow.png")
+    width: 19px
+    height: 17px
+    transform: rotate(180deg)
+    cursor: pointer
+
+  &::after
+    content: ""
+    position: absolute
+    right: -3px
+    bottom: -10px
+    width: 0
+    height: 0
+    border-top: 15px solid transparent
+    border-bottom: 15px solid transparent
+    border-left: 15px solid $bg-color
+    background-color: $bg-color
+    transform: rotate(45deg)
+
+  input
+    position: absolute
+    cursor: pointer
+    display: block
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0)
+
+
+.color-red
+  color: $red
