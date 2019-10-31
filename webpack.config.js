@@ -7,9 +7,9 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve(__dirname, './dist/js'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'main.js',
-    publicPath: "dist/js"
+    publicPath: "dist/"
   },
 
   module: {
@@ -24,6 +24,3 @@ module.exports = {
     overlay: true
   }
 };
-
-
-
