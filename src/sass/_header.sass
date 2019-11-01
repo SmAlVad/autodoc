@@ -20,52 +20,16 @@ header
   font-size: .9rem
   font-weight: bold
   display: block
-  background-color: #34b441
   color: white
+  @include beveled-corners(#34b441, 10px, 0, 10px, 0)
 
-  &::before
-    content: ""
-    position: absolute
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $bg-color
-    background-color: $bg-color
-    transform: rotate(225deg)
-    top: -7px
-    left: -2px
 
-  &::after
-    content: ""
-    position: absolute
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $bg-color
-    background-color: $bg-color
-    transform: rotate(45deg)
-    right: -2px
-    bottom: -8px
 
 nav
   position: relative
   margin-bottom: 2rem
   background-color: $yellow
-
-  &::after
-    content: ""
-    position: absolute
-    right: -3px
-    bottom: -10px
-    width: 0
-    height: 0
-    border-top: 15px solid transparent
-    border-bottom: 15px solid transparent
-    border-left: 15px solid $bg-color
-    background-color: $bg-color
-    transform: rotate(45deg)
+  @include beveled-corners($yellow, 0, 0, 15px, 0)
 
   ul
     margin: 0

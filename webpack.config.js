@@ -1,5 +1,5 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -19,6 +19,14 @@ module.exports = {
       {test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader']},
     ]
   },
+
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+  ],
 
   devServer: {
     overlay: true

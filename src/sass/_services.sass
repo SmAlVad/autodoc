@@ -18,10 +18,10 @@
 
 .services-list__item
   flex-basis: 43%
-  background-color: $white
   padding: 3%
-  border-radius: 10px
   margin-bottom: 3%
+  box-shadow: 0 15px 12px 10px rgba(228, 228, 228, 0.75)
+  //@include beveled-corners($red, 15px, 0, 15px, 0)
 
 .services-list__item-price
   display: flex
@@ -34,36 +34,10 @@
 
 .services-list__item-price-list
   position: relative
-  background-color: $yellow
   padding: 3% 5%
   cursor: pointer
+  @include beveled-corners($yellow, 10px, 0, 10px, 0)
 
   &:hover
-    background-color: $black
+    @include beveled-corners($black, 10px, 0, 10px, 0)
     color: $white
-
-  &::before
-    content: ""
-    position: absolute
-    top: -7px
-    left: -2px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $white
-    background-color: $white
-    transform: rotate(225deg)
-
-  &::after
-    content: ""
-    position: absolute
-    right: -3px
-    bottom: -7px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $white
-    background-color: $white
-    transform: rotate(45deg)

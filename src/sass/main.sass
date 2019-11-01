@@ -4,6 +4,14 @@ $white: #fff
 $bg-color: #fafafa
 $black: #000
 $yellow: #ffcd00
+$light-grey: #e0e0e0
+
+@mixin beveled-corners($bg, $tl:0, $tr:$tl, $br:$tl, $bl:$tr)
+  background: $bg
+  background: linear-gradient(135deg, transparent $tl, $bg 0) top left, linear-gradient(225deg, transparent $tr, $bg 0) top right, linear-gradient(-45deg, transparent $br, $bg 0)bottom right, linear-gradient(45deg, transparent $bl, $bg 0)bottom left
+  background-size: 50% 50%
+  background-repeat: no-repeat
+
 
 // Fonts
 @font-face
@@ -34,6 +42,9 @@ html, body
     padding: 3%
     overflow: hidden
 
+@import "slick/slick"
+@import "slick/slick-theme"
+
 @import "header"
 @import "slider"
 @import "services"
@@ -43,6 +54,7 @@ html, body
 @import "about"
 @import "contact"
 @import "footer"
+@import "call-me-action"
 
 
 

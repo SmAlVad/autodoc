@@ -16,7 +16,7 @@
   <!-- Header -->
   <header>
     <div class="logo"><img src="img/logo.png" alt=""></div>
-    <a class="phone" href="">+7 (921) 445-50-34</a>
+    <a class="phone" href="tel:89616120534">8 (961) 612-05-34</a>
     <a class="call-me" href="#">Перезвонить мне</a>
   </header>
   <!-- /Header -->
@@ -24,15 +24,15 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="#">Услуги</a></li>
+      <li><a href="#services">Услуги</a></li>
       <li class="nav-sep"></li>
-      <li><a href="#">Отзывы</a></li>
+      <li><a href="#testimonials">Отзывы</a></li>
       <li class="nav-sep"></li>
-      <li><a href="#">Наши работы</a></li>
+      <li><a href="#our-work">Наши работы</a></li>
       <li class="nav-sep"></li>
-      <li><a href="#">О компонии</a></li>
+      <li><a href="#about">О компонии</a></li>
       <li class="nav-sep"></li>
-      <li><a href="#">Контакты</a></li>
+      <li><a href="#contact">Контакты</a></li>
     </ul>
   </nav>
   <!-- /Navigation -->
@@ -40,16 +40,8 @@
   <!-- Main slider -->
   <div class="main-slider">
 
-    <!-- Left arrow -->
-    <div class="arrow left-arrow">
-      <img src="img/arrow.png" alt="">
-    </div>
-    <!-- Right arrow -->
-    <div class="arrow right-arrow active-arrow">
-      <img src="img/arrow.png" alt="">
-    </div>
-
-    <div class="slide__1">
+    <!-- First slide -->
+    <div class="slide slide__1">
       <div class="slide__1-title">
         <div>ПОКРАСКА ТРЕТЬЕГО <br/> ЭЛЕМЕНТА <span class="color-red">БЕСПЛАТНО</span></div>
         <div class="slide__1-title-price">
@@ -61,18 +53,43 @@
 
       <form action="#" class="slide__1-form">
         <input type="text" name="name" placeholder="имя активное поле">
+        <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
 
         <div class="slide__1-form-submit">
           <input type="submit" value="">
         </div>
       </form>
     </div>
+    <!-- /First slide -->
+
+    <!-- Second slide -->
+    <div class="slide slide__2">
+      <div class="banner">
+        <div>
+          <h4>ПОКРАСКА АВТО <br> В САНКТ-ПЕТЕРБУРГЕ</h4>
+          <div class="price">от 3.500 Р</div>
+        </div>
+        <div>
+          <img src="img/slide1.png" alt="">
+        </div>
+      </div>
+
+      <form action="#" class="slide__1-form">
+        <input type="text" name="name" placeholder="имя активное поле">
+        <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
+
+        <div class="slide__1-form-submit">
+          <input type="submit" value="">
+        </div>
+      </form>
+    </div>
+    <!-- /Second slide -->
 
   </div>
   <!-- /Main slider -->
 
   <!-- Services -->
-  <section class="services">
+  <section class="services" id="services">
     <h2>УСЛУГИ</h2>
 
     <div class="services-list">
@@ -87,7 +104,16 @@
       </div>
 
       <div class="services-list__item">
-        <h3>Кузовной ремонт</h3>
+        <h3>Покраска авто</h3>
+        <p>Кузов может составлять до половины стоимости самого автомобиля. #2</p>
+        <div class="services-list__item-price">
+          <div class="services-list__item-price-value">от 3.500 Р</div>
+          <div class="services-list__item-price-list">открыть прайс</div>
+        </div>
+      </div>
+
+      <div class="services-list__item">
+        <h3>Слесарные работы</h3>
         <p>Кузов может составлять до половины стоимости самого автомобиля. #2</p>
         <div class="services-list__item-price">
           <div class="services-list__item-price-value">от 500 Р</div>
@@ -96,19 +122,10 @@
       </div>
 
       <div class="services-list__item">
-        <h3>Кузовной ремонт</h3>
+        <h3>Ремонт коммерческого транспорта</h3>
         <p>Кузов может составлять до половины стоимости самого автомобиля. #2</p>
         <div class="services-list__item-price">
-          <div class="services-list__item-price-value">от 500 Р</div>
-          <div class="services-list__item-price-list">открыть прайс</div>
-        </div>
-      </div>
-
-      <div class="services-list__item">
-        <h3>Кузовной ремонт</h3>
-        <p>Кузов может составлять до половины стоимости самого автомобиля. #2</p>
-        <div class="services-list__item-price">
-          <div class="services-list__item-price-value">от 500 Р</div>
+          <div class="services-list__item-price-value">от 650 Р</div>
           <div class="services-list__item-price-list">открыть прайс</div>
         </div>
       </div>
@@ -118,7 +135,7 @@
   <!-- /Services -->
 
   <!-- Advantages -->
-  <section class="advantages">
+  <section class="advantages" id="advantages">
     <h2>ПРЕИМУЩЕСТВА</h2>
 
     <div class="advantages-list">
@@ -143,34 +160,95 @@
   <!-- Advantages -->
 
   <!-- Testimonials -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <h2>ОТЗЫВЫ</h2>
 
     <div class="testimonials-slider">
-      <div class="testimonials-slider__left-arrow"></div>
-      <div class="testimonials-slider__right-arrow"></div>
 
       <div class="testimonials-slider__item">
-        <div class="testimonials-slider__item-image">
+        <div class="content">
+          <div class="testimonials-slider__item-image">
 
-          <div class="testimonials-slider__item-image-car">BMW X6</div>
+            <div class="testimonials-slider__item-image-car">BMW X6</div>
 
-          <div class="testimonials-slider__item-image-wrapper">
-            <img src="img/testimonial1.png" alt="">
+            <div class="testimonials-slider__item-image-wrapper">
+              <img src="img/testimonial-1.jpg" alt="">
 
-            <div class="testimonials-slider__item-image-text">
-              Lorem ipsum dolor sit amet.
+              <!--            <div class="testimonials-slider__item-image-text">-->
+              <!--              Lorem ipsum dolor sit amet.-->
+              <!--            </div>-->
             </div>
-          </div>
 
+          </div>
+          <div class="testimonials-slider__item-description">
+            <h3>Александр Нечаев, BMW X6</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+            </p>
+          </div>
         </div>
-        <div class="testimonials-slider__item-description">
-          <h3>Александр Нечаев, BMW X6</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam soluta. Ipsa numquam perferendis temporibus?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam soluta. Ipsa numquam perferendis temporibus?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam soluta. Ipsa numquam perferendis temporibus?
-          </p>
+      </div>
+
+      <div class="testimonials-slider__item">
+        <div class="content">
+          <div class="testimonials-slider__item-image">
+
+            <div class="testimonials-slider__item-image-car">Volkswagen</div>
+
+            <div class="testimonials-slider__item-image-wrapper">
+              <img src="img/testimonial-2.jpg" alt="">
+
+              <!--            <div class="testimonials-slider__item-image-text">-->
+              <!--              Lorem ipsum dolor sit amet.-->
+              <!--            </div>-->
+            </div>
+
+          </div>
+          <div class="testimonials-slider__item-description">
+            <h3>Александр Нечаев, Volkswagen</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-slider__item">
+        <div class="content">
+          <div class="testimonials-slider__item-image">
+
+            <div class="testimonials-slider__item-image-car">Lada Xray</div>
+
+            <div class="testimonials-slider__item-image-wrapper">
+              <img src="img/testimonial-3.jpg" alt="">
+
+              <!--            <div class="testimonials-slider__item-image-text">-->
+              <!--              Lorem ipsum dolor sit amet.-->
+              <!--            </div>-->
+            </div>
+
+          </div>
+          <div class="testimonials-slider__item-description">
+            <h3>Александр Нечаев, Lada Xray</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
+              soluta. Ipsa numquam perferendis temporibus?
+            </p>
+          </div>
         </div>
       </div>
 
@@ -179,43 +257,51 @@
   <!-- /Testimonials -->
 
   <!-- Our work -->
-  <section class="our-work">
+  <section class="our-work" id="our-work">
     <h2>НАШИ РАБОТЫ</h2>
 
     <div class="our-work-slider">
 
-      <!-- Left arrow -->
-      <div class="arrow left-arrow">
-        <img src="img/arrow.png" alt="">
-      </div>
-      <!-- Right arrow -->
-      <div class="arrow right-arrow active-arrow">
-        <img src="img/arrow.png" alt="">
-      </div>
-
+      <!-- Example 1 -->
       <div class="our-work-slider__item">
-
         <div class="our-work-slider__item-image-wrapper">
           <img src="/img/bilo.png" alt="" class="our-work-slider__item-before">
           <img src="/img/stalo.png" alt="" class="our-work-slider__item-after">
 
           <div class="our-work-slider__item-img">
-            <img src="/img/bs1.png" alt="">
+            <img src="/img/bs-1-before.jpeg" alt="">
           </div>
 
           <div class="our-work-slider__item-img">
-            <img src="/img/bs1.png" alt="">
+            <img src="/img/bs-1-after.jpeg" alt="">
           </div>
         </div>
-
       </div>
+      <!-- /Example 1 -->
+
+      <!-- Example 2 -->
+      <div class="our-work-slider__item">
+        <div class="our-work-slider__item-image-wrapper">
+          <img src="/img/bilo.png" alt="" class="our-work-slider__item-before">
+          <img src="/img/stalo.png" alt="" class="our-work-slider__item-after">
+
+          <div class="our-work-slider__item-img">
+            <img src="/img/bs-2-before.jpeg" alt="">
+          </div>
+
+          <div class="our-work-slider__item-img">
+            <img src="/img/bs-2-after.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- /Example 2 -->
 
     </div>
   </section>
   <!-- /Our work -->
 
   <!-- About -->
-  <section class="about">
+  <section class="about" id="about">
 
     <div class="about__banner">
       <img src="img/team.png" alt="">
@@ -241,7 +327,7 @@
   <!-- About -->
 
   <!-- Contact -->
-  <section class="contact">
+  <section class="contact" id="contact">
 
     <div class="contact-list">
       <h3>КОНТАКТЫ</h3>
@@ -250,7 +336,7 @@
         <div class="icon"><img src="img/address.png" alt=""></div>
         <div class="info contact-address">
           <h4>НАШ АДРЕС</h4>
-          <p>ул. Уличная, дом 12/7 <br /> 3 этаж офис 303</p>
+          <p>Макулатурный проезд <br/> дом 5, корп. 3</p>
         </div>
       </div>
 
@@ -258,7 +344,7 @@
         <div class="icon"><img src="img/mail.png" alt=""></div>
         <div class="info contact-mail">
           <h4>ПОЧТА</h4>
-          <a href="#">mail@autodoc.ru</a>
+          <a href="mailto:avtodoc77@mail.ru">avtodoc77@mail.ru</a>
         </div>
       </div>
 
@@ -266,7 +352,7 @@
         <div class="icon"><img src="img/phone.png" alt=""></div>
         <div class="info contact-phone">
           <h4>ТЕЛЕФОН</h4>
-          <a href="#">8 (812) 123-34-79</a>
+          <a href="tel:89616120534">8 (961) 612-05-34</a>
         </div>
       </div>
 
@@ -291,6 +377,31 @@
   </footer>
   <!-- /Footer -->
 
+  <!-- Call me Pop-up -->
+  <div class="call-me-action">
+    <form action="" id="call-me-action-form">
+
+      <h3>Заполните форму</h3>
+
+      <div class="form-group">
+        <label for="call-me-action-form-name">Имя</label>
+        <input type="text" name="name" id="call-me-action-form-name">
+      </div>
+
+      <div class="form-group">
+        <label for="call-me-action-form-phone">Телефон</label>
+        <input type="text" name="phone" id="call-me-action-form-phone">
+      </div>
+
+      <div class="form-submit">
+          <input type="submit" value="Перезвоните мне">
+      </div>
+
+      <div class="close">Закрыть</div>
+      <div class="phone-icon"><img src="img/phone.png" alt=""></div>
+
+    </form>
+  </div>
 </div>
 
 <script src="dist/main.js"></script>

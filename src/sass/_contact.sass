@@ -8,6 +8,7 @@
   position: absolute
   top: 50px
   left: 55px
+  @include beveled-corners($bg-color, 10px, 0, 10px, 0)
 
   h3
     font-size: 1.6rem
@@ -52,34 +53,7 @@
   font-weight: bold
   padding: 15px
   margin-bottom: 12px
-  background-color: $red
   text-decoration: none
   text-align: center
   color: $white
-
-  &::before
-    content: ""
-    position: absolute
-    top: -7px
-    left: -2px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $white
-    background-color: $bg-color
-    transform: rotate(225deg)
-
-  &::after
-    content: ""
-    position: absolute
-    z-index: 2
-    right: -2px
-    bottom: -6px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $bg-color
-    background-color: $white
-    transform: rotate(45deg)
+  @include beveled-corners($red, 10px, 0, 10px, 0)

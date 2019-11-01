@@ -8,10 +8,36 @@
     margin-bottom: 4rem
 
 .testimonials-slider
+  padding: 0 55px
+
+  .arrow
+    top: 40%
+    position: absolute
+    z-index: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #e0e0e0
+    width: 45px
+    height: 45px
+    cursor: pointer
+
+  .left-arrow
+    left: 0
+    @include beveled-corners($red, 10px, 0, 0, 0)
+
+  .right-arrow
+    right: 0
+    @include beveled-corners($red, 0, 0, 10px, 0)
+
+    img
+      transform: rotate(180deg)
+
 
 .testimonials-slider__item
-  display: flex
-  justify-content: space-between
+  .content
+    display: flex
+    justify-content: space-between
 
 .testimonials-slider__item-image
   flex-basis: 49%
@@ -33,19 +59,6 @@
     background-color: $bg-color
     transform: rotate(225deg)
 
-  &::after
-    content: ""
-    position: absolute
-    z-index: 2
-    right: -2px
-    bottom: -4px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $bg-color
-    background-color: $bg-color
-    transform: rotate(45deg)
 
   img
     width: 100%
@@ -63,11 +76,11 @@
 
 .testimonials-slider__item-image-car
   position: absolute
-  top: 45px
-  left: -15px
-  background-color: $yellow
+  bottom: 15px
+  right: 10px
   padding: 10px 20px
   z-index: 1
+  @include beveled-corners($yellow, 0, 8px, 0, 0)
 
 
 .testimonials-slider__item-description

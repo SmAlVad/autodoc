@@ -7,11 +7,10 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "prod": "npm run production",
+    "production": "webpack --webpack --mode production",
     "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open"
+    "dev": "webpack-dev-server --mode development --open"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "babel-preset-env": "^1.7.0",
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^4.2.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "file-loader": "^4.2.0"
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
   }
 }
