@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "inputmask": "^4.0.9",
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1"
   }
