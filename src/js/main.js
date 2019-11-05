@@ -5,11 +5,18 @@ import Inputmask from 'inputmask'
 
 $(document).ready(function () {
 
+  // Кнопка "Перезвонить мне" в навигации
   $('.call-me').on('click', function () {
     callMe()
   });
 
+  // Кнопка "Перезвонить мне" в контактах
   $('.contact__call-me').on('click', function () {
+    callMe()
+  });
+
+  // Кнопка "Перезвонить мне" в мобильном меню
+  $('.mob-call-me').on('click', function () {
     callMe()
   });
 
@@ -34,6 +41,11 @@ $(document).ready(function () {
     slidesToShow: 1,
     prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
     nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
+  });
+
+  // Мобильное меню
+  $('.mob-menu').on('click', function (e) {
+    $('.mob-nav').slideToggle();
   })
 
 });
@@ -61,10 +73,10 @@ function callMe() {
   const imPhone = new Inputmask("+7 (999) 999-99-99");
   imPhone.mask($('#call-me-action-form-phone'));
 
-  $('.call-me-action').show();
+  $('.call-me-action').fadeIn(300);
 
   $('.close').on('click', function () {
-    $('.call-me-action').hide()
+    $('.call-me-action').fadeOut(300)
   });
 
   // Отправка данных с формы
