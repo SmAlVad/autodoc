@@ -1,7 +1,10 @@
 .services
+  width: 1230px
+  margin: 0 auto
+
   h2
     text-align: center
-    font-size: 2.8rem
+    font-size: 3.5rem
     font-weight: 100
     margin-bottom: 4rem
 
@@ -11,17 +14,25 @@
   justify-content: space-between
 
   h3
-    margin: 0 0 8% 0
+    font-size: 1.8rem
+    font-weight: 100
+    padding-bottom: 20px
+    border-bottom: 1px solid #eae8e8
 
   p
     margin: 0 0 8% 0
 
 .services-list__item
-  flex-basis: 43%
-  padding: 3%
+  position: relative
+  flex-basis: 41%
+  padding: 20px 40px
   margin-bottom: 3%
-  box-shadow: 0 15px 12px 10px rgba(228, 228, 228, 0.75)
-  //@include beveled-corners($red, 15px, 0, 15px, 0)
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1)
+  @include beveled-corners($white, 10px, 0, 0, 0)
+  &:hover
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2)
+    h3
+      color: $red
 
 .services-list__item-price
   display: flex
@@ -29,18 +40,24 @@
   align-items: center
 
 .services-list__item-price-value
+  font-weight: bold
   font-size: 2rem
   color: $red
 
 .services-list__item-price-list
   position: relative
-  padding: 3% 5%
+  padding: 13px 30px
   cursor: pointer
-  @include beveled-corners($yellow, 10px, 0, 10px, 0)
+  @include beveled-corners($yellow, 5px, 0, 5px, 0)
 
   &:hover
     @include beveled-corners($black, 10px, 0, 10px, 0)
     color: $white
+
+.services-list__item-dots
+  position: absolute
+  left: -45px
+  top: 150px
 
 @media screen and (max-width: 720px)
   .services-list__item

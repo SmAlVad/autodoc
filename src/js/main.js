@@ -23,6 +23,7 @@ $(document).ready(function () {
   // Главный слайдер
   $('.main-slider').slick({
     slidesToShow: 1,
+    centerPadding: 0,
     //autoplay: true,
     //autoplaySpeed: 5000,
     prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
@@ -30,18 +31,18 @@ $(document).ready(function () {
   });
 
   // Слайдер "Наши работы"
-  $('.our-work-slider').slick({
-    slidesToShow: 1,
-    prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
-    nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
-  });
+  // $('.our-work-slider').slick({
+  //   slidesToShow: 1,
+  //   prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
+  //   nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
+  // });
 
   // Слайдер "Отзывы"
-  $('.testimonials-slider').slick({
-    slidesToShow: 1,
-    prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
-    nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
-  });
+  // $('.testimonials-slider').slick({
+  //   slidesToShow: 1,
+  //   prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
+  //   nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
+  // });
 
   // Мобильное меню
   $('.mob-menu').on('click', function (e) {

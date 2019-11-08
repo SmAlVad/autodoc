@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {test: /\.js$/, loader: 'babel-loader', exclude: '/node-modules/'},
       {test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader']},
-      {test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader']},
+      {test: /\.(woff|woff2|eot|ttf|otf|svg|png)$/, use: ['file-loader']},
     ]
   },
 

@@ -16,6 +16,15 @@
   <!-- Header -->
   <header>
     <div class="logo"><img src="img/logo.png" alt=""></div>
+    <div class="address">
+      <div class="address_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><g><path fill="#dc0008" d="M9.586 23.986l-.588-.476a39.417 39.417 0 0 1-4.443-4.354C1.532 15.677 0 12.554 0 9.875v-.266C0 4.311 4.3 0 9.586 0c5.285 0 9.586 4.312 9.586 9.61v.266c0 .225-.012.453-.034.685l-1.874-1.715c-.384-3.907-3.681-6.97-7.678-6.97-4.254 0-7.716 3.47-7.716 7.734v.266c0 4.528 5.82 10.01 7.716 11.674zm5.751-6.595h2.806v2.812h-2.806zM13.56 9.609a3.984 3.984 0 0 1-3.974 3.985A3.984 3.984 0 0 1 5.61 9.609a3.984 3.984 0 0 1 3.975-3.984 3.984 3.984 0 0 1 3.974 3.984zm-6.078 0a2.11 2.11 0 0 0 2.104 2.11 2.11 2.11 0 0 0 0-4.22 2.11 2.11 0 0 0-2.104 2.11zm15.257 9.32l-.525-.481v3.01A2.542 2.542 0 0 1 19.677 24h-5.922a2.542 2.542 0 0 1-2.536-2.542v-3.01l-.526.48-1.26-1.384 7.283-6.661L24 17.543zm-2.396-2.192l-3.626-3.316-3.627 3.316v4.72c0 .369.299.668.666.668h5.922c.367 0 .665-.3.665-.667z"/></g></g></svg>
+      </div>
+      <div class="address_text">
+        <h5>НАШ АДРЕС:</h5>
+        <p>Макулатурный проезд <br/> дом 5, корп. 3</p>
+      </div>
+    </div>
     <a class="phone" href="tel:89214455034">8 (921) 445-50-34</a>
     <a class="call-me" href="#">Перезвонить мне</a>
   </header>
@@ -56,54 +65,62 @@
   <!-- /Mobile navigation -->
 
   <!-- Main slider -->
-  <div class="main-slider">
+  <div class="slider-container">
 
-    <!-- First slide -->
-    <div class="slide slide__1">
-      <div class="slide__1-title">
-        <div>ПОКРАСКА ТРЕТЬЕГО <br/> ЭЛЕМЕНТА <span class="color-red">БЕСПЛАТНО</span></div>
-        <div class="slide__1-title-price">
-          <div class="slide__1-title-price-value">от 3.500 Р</div>
+    <div class="main-slider">
+      <!-- First slide -->
+      <div class="slide slide__1">
+
+        <div class="slide__1-title">
+          <div class="slide__1-title-price-text">ПОКРАСКА ТРЕТЬЕГО <br/> ЭЛЕМЕНТА <span class="color-red">БЕСПЛАТНО</span></div>
+
+          <div class="slide__1-title-price">
+            <div class="slide__1-title-price-value">от 3.500 Р</div>
+          </div>
         </div>
+
+        <img src="svg_img/car.png" alt="" class="slide__1-image">
+        <img src="svg_img/car-dots.png" alt="" class="slide__1-image-dots">
+
+        <form action="#" class="slide__1-form">
+          <input type="text" name="name" placeholder="Имя">
+          <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
+
+          <div class="slide__1-form-submit">
+            <input type="submit" value="">
+          </div>
+
+          <img src="svg_img/dots-slider1-form.png" alt="" class="slide__1-form-dots">
+        </form>
       </div>
+      <!-- /First slide -->
 
-      <img src="img/slide1.png" alt="">
-
-      <form action="#" class="slide__1-form">
-        <input type="text" name="name" placeholder="имя активное поле">
-        <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
-
-        <div class="slide__1-form-submit">
-          <input type="submit" value="">
+      <!-- Second slide -->
+      <div class="slide slide__2">
+        <div class="banner">
+          <div>
+            <h4>ПОКРАСКА АВТО <br> В САНКТ-ПЕТЕРБУРГЕ</h4>
+            <div class="price">от 3.500 Р</div>
+          </div>
+          <div>
+            <img src="img/slide1.png" alt="">
+          </div>
         </div>
-      </form>
-    </div>
-    <!-- /First slide -->
 
-    <!-- Second slide -->
-    <div class="slide slide__2">
-      <div class="banner">
-        <div>
-          <h4>ПОКРАСКА АВТО <br> В САНКТ-ПЕТЕРБУРГЕ</h4>
-          <div class="price">от 3.500 Р</div>
-        </div>
-        <div>
-          <img src="img/slide1.png" alt="">
-        </div>
+        <form action="#" class="slide__1-form">
+          <input type="text" name="name" placeholder="имя активное поле">
+          <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
+
+          <div class="slide__1-form-submit">
+            <input type="submit" value="">
+          </div>
+        </form>
       </div>
+      <!-- /Second slide -->
 
-      <form action="#" class="slide__1-form">
-        <input type="text" name="name" placeholder="имя активное поле">
-        <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
-
-        <div class="slide__1-form-submit">
-          <input type="submit" value="">
-        </div>
-      </form>
     </div>
-    <!-- /Second slide -->
-
   </div>
+
   <!-- /Main slider -->
 
   <!-- Services -->
@@ -137,6 +154,8 @@
           <div class="services-list__item-price-value">от 500 Р</div>
           <div class="services-list__item-price-list">открыть прайс</div>
         </div>
+
+        <img src="svg_img/dots-sevice.png" alt="" class="services-list__item-dots">
       </div>
 
       <div class="services-list__item">
@@ -153,195 +172,177 @@
   <!-- /Services -->
 
   <!-- Advantages -->
-  <section class="advantages" id="advantages">
-    <h2>ПРЕИМУЩЕСТВА</h2>
+  <div class="advantages-wrapper">
+    <section class="advantages" id="advantages">
+      <h2>ПРЕИМУЩЕСТВА</h2>
 
-    <div class="advantages-list">
+      <div class="advantages-list">
 
-      <div class="advantages-list__item">
-        <img src="img/adv1.png" alt="">
-        <h3>Большой выбор запчастей</h3>
+        <div class="advantages-list__item">
+          <img src="img/adv1.png" alt="">
+          <div class="advantages-list__item-sep"></div>
+          <h3>Большой выбор запчастей</h3>
+        </div>
+
+        <div class="advantages-list__item">
+          <img src="img/adv2.png" alt="">
+          <div class="advantages-list__item-sep"></div>
+          <h3>МАКСИМАЛЬНАЯ СКИДКА</h3>
+        </div>
+
+        <div class="advantages-list__item">
+          <img src="img/adv3.png" alt="">
+          <div class="advantages-list__item-sep"></div>
+          <h3>БЕСПЛАТНАЯ ДОСТАВКА</h3>
+          <img src="svg_img/dots-slider1-form.png" alt="" class="advantages-list__item-dots">
+        </div>
+
       </div>
-
-      <div class="advantages-list__item">
-        <img src="img/adv2.png" alt="">
-        <h3>МАКСИМАЛЬНАЯ СКИДКА</h3>
-      </div>
-
-      <div class="advantages-list__item">
-        <img src="img/adv3.png" alt="">
-        <h3>БЕСПЛАТНАЯ ДОСТАВКА</h3>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </div>
   <!-- Advantages -->
 
   <!-- Testimonials -->
-  <section class="testimonials" id="testimonials">
-    <h2>ОТЗЫВЫ</h2>
+  <div class="testimonials-wrapper">
+    <section class="testimonials" id="testimonials">
+      <h2>ОТЗЫВЫ</h2>
 
-    <div class="testimonials-slider">
-
-      <div class="testimonials-slider__item">
-        <div class="content">
-          <div class="testimonials-slider__item-image">
-
-            <div class="testimonials-slider__item-image-car">BMW X6</div>
-
-            <div class="testimonials-slider__item-image-wrapper">
-              <img src="img/testimonial-1.jpg" alt="">
-
-              <!--            <div class="testimonials-slider__item-image-text">-->
-              <!--              Lorem ipsum dolor sit amet.-->
-              <!--            </div>-->
-            </div>
-
-          </div>
-          <div class="testimonials-slider__item-description">
-            <h3>Александр Нечаев, BMW X6</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-            </p>
-          </div>
-        </div>
+      <div class="testimonials-slider-arrow">
+        <div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>
+        <div class="arrow right-arrow active"><img src="img/arrow.png" alt=""></div>
       </div>
 
-      <div class="testimonials-slider__item">
-        <div class="content">
-          <div class="testimonials-slider__item-image">
+      <div class="testimonials-slider">
+        <div class="testimonials-slider__item">
 
-            <div class="testimonials-slider__item-image-car">Volkswagen</div>
+          <div class="ts__item-image-wrapper">
+            <div class="ts__item-image-car-name">Volkswagen</div>
+            <img src="svg_img/testimonial-1.png" alt="" class="ts__item-image">
+            <div class="ts__item-image-text">
+              Как чинить мотор V8, заголовок видео можеть
+              быть в две строчки
+            </div>
+          </div>
 
-            <div class="testimonials-slider__item-image-wrapper">
-              <img src="img/testimonial-2.jpg" alt="">
-
-              <!--            <div class="testimonials-slider__item-image-text">-->
-              <!--              Lorem ipsum dolor sit amet.-->
-              <!--            </div>-->
+          <div class="ts__item-description">
+            <div class="ts__item-description-images">
+              <div class="ts__item-description-images-car">
+                <div class="ts__item-description-images-car-name">Audi</div>
+                <img src="svg_img/testimonial-2.png" alt="">
+              </div>
+              <div class="ts__item-description-images-car">
+                <div class="ts__item-description-images-car-name">Bugatti</div>
+                <img src="svg_img/testimonial-3.png" alt="">
+              </div>
             </div>
 
-          </div>
-          <div class="testimonials-slider__item-description">
-            <h3>Александр Нечаев, Volkswagen</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonials-slider__item">
-        <div class="content">
-          <div class="testimonials-slider__item-image">
-
-            <div class="testimonials-slider__item-image-car">Lada Xray</div>
-
-            <div class="testimonials-slider__item-image-wrapper">
-              <img src="img/testimonial-3.jpg" alt="">
-
-              <!--            <div class="testimonials-slider__item-image-text">-->
-              <!--              Lorem ipsum dolor sit amet.-->
-              <!--            </div>-->
+            <div class="ts__item-description-text">
+              <h4>Александр Нечаев, BMW X6</h4>
+              <p>
+                1903–1905 годах американский изобретатель Чарльз Найт построил и
+                испытал экспериментальный четырёхтактный ДВС, в котором за газораспределение
+                отвечали не клапаны, а концентрическая пара подвижных гильз, вложенных в рабочий цилиндр. Уже внутри этой
+                пары гильз двигался рабочий поршень. Каждая гильза была снабжена крупными окнами с одного края. При смещении
+                гильзы вверх и вниз эти.
+              </p>
             </div>
+          </div>
 
-          </div>
-          <div class="testimonials-slider__item-description">
-            <h3>Александр Нечаев, Lada Xray</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae eaque fugit iusto possimus quibusdam
-              soluta. Ipsa numquam perferendis temporibus?
-            </p>
-          </div>
         </div>
+
       </div>
 
-    </div>
-  </section>
+      <div class="testimonials-slider-dots">
+        <ul>
+          <li></li>
+          <li></li>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+  </div>
   <!-- /Testimonials -->
 
   <!-- Our work -->
-  <section class="our-work" id="our-work">
-    <h2>НАШИ РАБОТЫ</h2>
+  <div class="our-work-wrapper">
+    <section class="our-work" id="our-work">
+      <h2>НАШИ РАБОТЫ</h2>
 
-    <div class="our-work-slider">
+      <div class="our-work-slider">
+        <div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>
+        <div class="arrow right-arrow active"><img src="img/arrow.png" alt=""></div>
 
-      <!-- Example 1 -->
-      <div class="our-work-slider__item">
-        <div class="our-work-slider__item-image-wrapper">
-          <img src="/img/bilo.png" alt="" class="our-work-slider__item-before">
-          <img src="/img/stalo.png" alt="" class="our-work-slider__item-after">
+        <!-- Example 1 -->
+        <div class="our-work-slider__item">
+          <div class="our-work-slider__item-image-wrapper">
+            <img src="svg_img/work-dots.png" alt="" class="ows-dots">
+            <div class="ows-before-stick">Было</div>
+            <div class="ows-after-stick">Стало</div>
 
-          <div class="our-work-slider__item-img">
-            <img src="/img/bs-1-before.jpeg" alt="">
-          </div>
+            <div class="our-work-slider__item-img ows-before">
+                <img src="/svg_img/bilo-1.png" alt="" width="705px">
+            </div>
 
-          <div class="our-work-slider__item-img">
-            <img src="/img/bs-1-after.jpeg" alt="">
-          </div>
-        </div>
-      </div>
-      <!-- /Example 1 -->
+            <div class="ows-slide">
+              <div>
+                <img src="svg_img/slide.png" alt="" class="ows-slide">
+              </div>
+            </div>
 
-      <!-- Example 2 -->
-      <div class="our-work-slider__item">
-        <div class="our-work-slider__item-image-wrapper">
-          <img src="/img/bilo.png" alt="" class="our-work-slider__item-before">
-          <img src="/img/stalo.png" alt="" class="our-work-slider__item-after">
-
-          <div class="our-work-slider__item-img">
-            <img src="/img/bs-2-before.jpeg" alt="">
-          </div>
-
-          <div class="our-work-slider__item-img">
-            <img src="/img/bs-2-after.jpeg" alt="">
+            <div class="our-work-slider__item-img ows-after">
+              <img src="/svg_img/stalo-1.jpg" alt="" width="705px">
+            </div>
           </div>
         </div>
-      </div>
-      <!-- /Example 2 -->
+        <!-- /Example 1 -->
 
-    </div>
-  </section>
+      </div>
+
+      <div class="our-work-slider-nav">
+        <ul>
+          <li><img src="svg_img/ow-1.png" alt=""></li>
+          <li><img src="svg_img/ow-2.png" alt=""></li>
+          <li><img src="svg_img/ow-3.png" alt=""></li>
+          <li><img src="svg_img/ow-4.png" alt=""></li>
+          <li><img src="svg_img/ow-5.png" alt=""></li>
+        </ul>
+      </div>
+    </section>
+  </div>
   <!-- /Our work -->
 
   <!-- About -->
-  <section class="about" id="about">
+  <div class="about-wrapper">
+    <section class="about" id="about">
 
-    <div class="about__banner">
-      <img src="img/team.png" alt="">
-      <div class="about__banner-stick">О компании</div>
-    </div>
+      <div class="about__banner">
+        <img src="svg_img/team.png" alt="" width="100%">
+        <div class="about__banner-stick">О компании</div>
+        <img src="svg_img/team-dots.png" alt="" class="about__banner-dots">
+      </div>
 
-    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, vero?</h3>
+      <div class="about__text">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, vero?</h3>
 
-    <p class="about__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
-      beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
-      numquam quam quidem quod sequi similique vero, voluptas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
-      beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
-      numquam quam quidem quod sequi similique vero, voluptas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
-      beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
-      numquam quam quidem quod sequi similique vero, voluptas!
-    </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
+          beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
+          numquam quam quidem quod sequi similique vero, voluptas!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
+          beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
+          numquam quam quidem quod sequi similique vero, voluptas!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur
+          beatae blanditiis ducimus eius eveniet facere fugit harum ipsam, libero nemo nostrum
+          numquam quam quidem quod sequi similique vero, voluptas!
+        </p>
 
-    <a href="#" class="about__more">Подробнее</a>
-  </section>
+        <a href="#" class="about__more">Подробнее</a>
+      </div>
+
+    </section>
+  </div>
   <!-- About -->
 
   <!-- Contact -->

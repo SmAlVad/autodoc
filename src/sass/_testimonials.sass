@@ -1,94 +1,112 @@
+.testimonials-wrapper
+  padding-top: 50px
+
 .testimonials
-  margin-bottom: 6%
+  width: 1230px
+  margin: 0 auto
 
   h2
     text-align: center
-    font-size: 2.8rem
+    font-size: 3.5rem
     font-weight: 100
-    margin-bottom: 4rem
+    margin-bottom: 5px
 
-.testimonials-slider
-  padding: 0 55px
+.testimonials-slider-arrow
+  padding-bottom: 30px
+  display: flex
+  justify-content: flex-end
 
   .arrow
-    top: 40%
-    position: absolute
-    z-index: 1
     display: flex
     justify-content: center
     align-items: center
-    background-color: #e0e0e0
-    width: 45px
-    height: 45px
     cursor: pointer
-
-  .left-arrow
-    left: 0
-    @include beveled-corners($red, 10px, 0, 0, 0)
+    width: 40px
+    height: 40px
+    @include beveled-corners(#e0e0e0, 5px, 0, 0, 0)
 
   .right-arrow
-    right: 0
-    @include beveled-corners($red, 0, 0, 10px, 0)
-
+    margin-left: 10px
     img
       transform: rotate(180deg)
 
+  .active
+    @include beveled-corners($red, 5px, 0, 0, 0)
 
 .testimonials-slider__item
-  .content
-    display: flex
-    justify-content: space-between
+  display: flex
+  justify-content: space-between
 
-.testimonials-slider__item-image
-  flex-basis: 49%
+.ts__item-image-wrapper
+  flex-basis: 50%
   position: relative
 
-.testimonials-slider__item-image-wrapper
+.ts__item-image
+  width: 100%
+
+.ts__item-image-car-name
+  position: absolute
+  top: 25px
+  left: -20px
+  padding: 7px
+  @include beveled-corners($yellow, 5px, 0, 0, 0)
+
+.ts__item-image-text
+  font-size: 1.2rem
+  line-height: 1.5
+  color: $white
+  position: absolute
+  bottom: 0
+  left: 0
+  padding: 20px
+  background-color: rgba(0, 0, 0, .8)
+
+.ts__item-description
+  flex-basis: 48%
+  padding-left: 2%
+
+.ts__item-description-images
+  display: flex
+  justify-content: space-between
+
+.ts__item-description-images-car
   position: relative
-
-  &::before
-    content: ""
-    position: absolute
-    top: -7px
-    left: -2px
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $bg-color
-    background-color: $bg-color
-    transform: rotate(225deg)
-
-
+  &:last-child
+    margin-left: 20px
   img
     width: 100%
 
-.testimonials-slider__item-image-text
+.ts__item-description-images-car-name
+  top: 20px
+  left: -10px
   position: absolute
-  bottom: 3px
-  width: 90%
-  padding: 5%
-  z-index: 1
-  background-color: rgba(0, 0, 0, .8)
-  color: $white
-  font-size: 1.8rem
+  padding: 7px
+  @include beveled-corners($yellow, 5px, 0, 0, 0)
 
-
-.testimonials-slider__item-image-car
-  position: absolute
-  bottom: 15px
-  right: 10px
-  padding: 10px 20px
-  z-index: 1
-  @include beveled-corners($yellow, 0, 8px, 0, 0)
-
-
-.testimonials-slider__item-description
-  flex-basis: 49%
-
+.ts__item-description-text
   p
-    line-height: 2
+    line-height: 1.5
 
+.testimonials-slider-dots
+  padding-top: 45px
+  ul
+    list-style-type: none
+    display: flex
+    justify-content: center
+    padding: 0
+    margin: 0
+    li
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      margin-right: 10px
+      background-color: #e0e0e0
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+
+    .active
+      background-color: $red
 
 @media screen and (max-width: 720px)
   .testimonials-slider__item

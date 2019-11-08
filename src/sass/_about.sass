@@ -1,12 +1,20 @@
+.about-wrapper
+  padding: 85px 0 105px 0
+
 .about
-  margin-bottom: 6%
+  width: 1230px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
 
-  h3
-    margin: 3% 0
-    font-size: 1.3rem
+.about__banner
+  flex-basis: 50%
 
-  .about__text
-    line-height: 2
+.about__text
+  flex-basis: 48%
+  padding-left: 2%
+  p
+    line-height: 1.5
     margin-top: 0
 
 .about__banner
@@ -39,12 +47,14 @@
     background-color: $bg-color
     transform: rotate(45deg)
 
-  img
-    width: 100%
+  .about__banner-dots
+    position: absolute
+    bottom: -40px
+    left: -45px
 
 .about__banner-stick
   position: absolute
-  top: 50px
+  top: 25px
   left: -20px
   color: $black
   padding: 10px 20px

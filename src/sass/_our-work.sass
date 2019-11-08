@@ -1,16 +1,24 @@
+.our-work-wrapper
+  background-color: #f5f5f5
+  padding-bottom: 50px
+
 .our-work
-  margin-bottom: 6%
+  width: 1230px
+  margin: 55px auto 0 auto
+  padding-top: 50px
 
   h2
     text-align: center
-    font-size: 2.8rem
+    font-size: 3.5rem
     font-weight: 100
     margin-bottom: 4rem
 
 
 .our-work-slider
   position: relative
-  padding: 0 55px
+  width: 706px
+  min-height: 400px
+  margin: 0 auto
 
   .arrow
     top: 45%
@@ -19,33 +27,28 @@
     display: flex
     justify-content: center
     align-items: center
-    background-color: #e0e0e0
+    @include beveled-corners(#e0e0e0, 5px, 0, 0, 0)
     width: 45px
     height: 45px
     cursor: pointer
 
   .left-arrow
-    left: 0
-    @include beveled-corners($red, 10px, 0, 0, 0)
+    left: -165px
 
   .right-arrow
-    right: 0
-    @include beveled-corners($red, 0, 0, 10px, 0)
-
+    right: -165px
     img
       transform: rotate(180deg)
 
-  .active-arrow
-    background-color: $red
+  .active
+    @include beveled-corners($red, 5px, 0, 0, 0)
 
 
 .our-work-slider__item
   //padding: 0 50px
 
 .our-work-slider__item-image-wrapper
-  position: relative
-  display: flex
-  justify-content: space-between
+
 
 .our-work-slider__item-before
   position: absolute
@@ -58,9 +61,75 @@
   right: 20px
 
 .our-work-slider__item-img
-  flex-basis: 49%
-  img
-    width: 100%
+  position: absolute
+  top: 0
+  left: 0
+
+.ows-before
+  width: 50%
+  overflow: hidden
+  z-index: 2
+
+
+.ows-before-img-wrapper
+  position: relative
+
+.ows-slide
+  cursor: pointer
+  width: 3px
+  height: 100%
+  background-color: $white
+  position: absolute
+  left: 50%
+  top: 0
+  z-index: 3
+  div
+    position: relative
+    height: 100%
+    img
+      width: 50px
+      height: 24px
+      position: absolute
+      top: 45%
+      left: -23px
+      z-index: 4
+      background-color: transparent
+
+
+.ows-after
+  z-index: 1
+
+.ows-before-stick
+  position: absolute
+  z-index: 4
+  top: 20px
+  left: -20px
+  padding: 5px 8px
+  color: $black
+  @include beveled-corners($yellow, 5px, 0, 0, 0)
+
+.ows-after-stick
+  position: absolute
+  z-index: 4
+  top: 20px
+  right: -20px
+  padding: 5px 8px
+  color: $white
+  @include beveled-corners($red, 5px, 0, 0, 0)
+
+.ows-dots
+  position: absolute
+  top: -50px
+  left: -50px
+
+.our-work-slider-nav
+  ul
+    list-style-type: none
+    display: flex
+    justify-content: center
+    li
+      cursor: pointer
+      margin-left: 25px
 
 @media screen and (max-width: 720px)
   .our-work-slider
