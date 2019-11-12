@@ -3,6 +3,11 @@ import '../sass/main.sass'
 import 'slick-carousel'
 import Inputmask from 'inputmask'
 
+require('./jquery.event.move');
+require('./jquery.twentytwenty');
+
+import services from './price'
+
 $(document).ready(function () {
 
   // Кнопка "Перезвонить мне" в навигации
@@ -21,28 +26,42 @@ $(document).ready(function () {
   });
 
   // Главный слайдер
-  $('.main-slider').slick({
-    slidesToShow: 1,
-    centerPadding: 0,
-    //autoplay: true,
-    //autoplaySpeed: 5000,
-    prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
-    nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
-  });
+  // $('.main-slider').slick({
+  //   slidesToShow: 1,
+  //   centerPadding: 0,
+  //   //autoplay: true,
+  //   //autoplaySpeed: 5000,
+  //   prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
+  //   nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
+  // });
 
   // Слайдер "Наши работы"
-  // $('.our-work-slider').slick({
-  //   slidesToShow: 1,
-  //   prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
-  //   nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
-  // });
+  $('.our-work-slider').slick({
+    swipe: false,
+    slidesToShow: 1,
+    prevArrow: `<div class="arrow left-arrow active"><img src="img/arrow.png" alt=""></div>`,
+    nextArrow: `<div class="arrow right-arrow active"><img src="img/arrow.png" alt=""></div>`
+  });
+
+  $(".bs-example-1").twentytwenty({
+    before_label: 'было',
+    after_label: 'стало'
+  });
+
+  $(".bs-example-2").twentytwenty({
+    before_label: 'было',
+    after_label: 'стало'
+  });
 
   // Слайдер "Отзывы"
-  // $('.testimonials-slider').slick({
-  //   slidesToShow: 1,
-  //   prevArrow: `<div class="arrow left-arrow"><img src="img/arrow.png" alt=""></div>`,
-  //   nextArrow: `<div class="arrow right-arrow"><img src="img/arrow.png" alt=""></div>`
-  // });
+  $('.testimonials-slider').slick({
+    slidesToShow: 1,
+    prevArrow: `<div class="arrow left-arrow active"><img src="img/arrow.png" alt=""></div>`,
+    nextArrow: `<div class="arrow right-arrow active"><img src="img/arrow.png" alt=""></div>`,
+    appendArrows: '.testimonials-slider-arrow',
+    // dots: true,
+    // appendDots: '.testimonials-slider-dots',
+  });
 
   // Мобильное меню
   $('.mob-menu').on('click', function (e) {
@@ -112,3 +131,30 @@ function callMe() {
 
   })
 }
+
+// Цены на услуги
+//kuzovnoj_remont, pokraska_avto, slesarnye_raboty, remont_kommercheskogo_transporta
+$('.services-list__item-price-list').on('click', function (e) {
+  e.preventDefault();
+  let price = $(this).data('name');
+
+  $('.service-pop-up').show();
+
+  $('.service-table').html('');
+
+  $('.service-table').append('<div class="close">закрыть</div>');
+  $('.service-table').append(services[price]);
+
+  $('.service-pop-up').on('click', function (e) {
+    let el = e.target;
+
+    if(el.className === 'close' || el.className === 'service-pop-up') {
+      $('.service-pop-up').fadeOut(300);
+    }
+
+
+  });
+
+
+
+});

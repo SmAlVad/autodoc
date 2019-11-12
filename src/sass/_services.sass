@@ -24,7 +24,7 @@
 
 .services-list__item
   position: relative
-  flex-basis: 41%
+  flex-basis: 48%
   padding: 20px 40px
   margin-bottom: 3%
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1)
@@ -33,6 +33,8 @@
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2)
     h3
       color: $red
+  p
+    line-height: 1.5
 
 .services-list__item-price
   display: flex
@@ -51,16 +53,94 @@
   @include beveled-corners($yellow, 5px, 0, 5px, 0)
 
   &:hover
-    @include beveled-corners($black, 10px, 0, 10px, 0)
+    @include beveled-corners($black, 5px, 0, 5px, 0)
     color: $white
 
 .services-list__item-dots
   position: absolute
   left: -45px
-  top: 150px
+  bottom: -45px
 
-@media screen and (max-width: 720px)
+// Service pop up
+.service-pop-up
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 4
+  background-color: rgba(255, 255, 255, .9)
+
+.service-table
+  padding: 1%
+  background-color: $bg-color
+  width: 80%
+  margin: 1% auto
+  overflow-y: auto
+
+  h3
+    margin-top: 0
+
+  .close
+    float: right
+    cursor: pointer
+
+  table
+    text-align: left
+    width: 100%
+    border-collapse: collapse
+    border: 1px solid $black
+
+    tr
+
+      td
+        border: 1px solid $black
+        padding: 5px
+        ul
+          list-style-type: none
+          margin: 0
+          padding: 0
+
+@media screen and (max-width: 1024px)
+  .services
+    width: 98%
+    padding: 0 1%
+
+  .services-list__item
+    flex-basis: 49%
+
+  .services-list__item-dots
+    display: none
+
+  .service-pop-up
+    overflow: auto
+
+  .service-table
+    padding: 1%
+    width: 98%
+
+@media screen and (max-width: 768px)
   .services-list__item
     flex-basis: 100%
-    padding: 3%
-    margin-bottom: 7%
+
+@media screen and (max-width: 480px)
+  .services
+    h2
+      font-size: 3rem
+      margin-bottom: 20px
+
+@media screen and (max-width: 320px)
+  .services
+    h2
+      font-size: 2rem
+
+  .services-list__item
+    padding: 10px
+
+  .services-list__item
+    h3
+      margin-top: 0
+
+  .services-list__item-price-list
+    padding: 7px 10px

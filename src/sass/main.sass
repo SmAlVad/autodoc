@@ -40,16 +40,24 @@ html, body
 
 @media screen and (max-width: 1024px)
   .container
-    width: 94%
-    padding: 3%
+    width: 98%
+    padding: 1%
     overflow: hidden
 
-@media screen and (max-width: 720px)
+@media screen and (max-width: 768px)
   html, body
     font-size: 12px
 
+  .container
+    width: 96%
+    padding: 2%
+
 @import "slick/slick"
 @import "slick/slick-theme"
+
+@import "twentyTwenty/foundation.css"
+@import "twentyTwenty/twentytwenty.css"
+@import "twentyTwenty/twentytwenty-no-compass.css"
 
 @import "header"
 @import "mobile-nav"

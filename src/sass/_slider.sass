@@ -47,29 +47,28 @@
     //margin: auto
     float: right
 
-  .slide__1-title
+.slide__1-title-price-text
+  padding: 4% 0 5% 0
+  font-size: 3rem
+  font-weight: 500
 
-    .slide__1-title-price-text
-      padding: 4% 0 5% 0
-      font-size: 3rem
-      font-weight: 500
+.slide__1-title-price
+  opacity: 0
+  font-size: 2.5rem
+  font-weight: bold
+  width: 280px
 
-    .slide__1-title-price
-      font-size: 2.5rem
-      font-weight: bold
-      width: 280px
+.slide__1-image
+  position: absolute
+  top: 0
+  right: -109px
+  z-index: 2
 
-  .slide__1-image
-    position: absolute
-    top: 0
-    right: -109px
-    z-index: 2
-
-  .slide__1-image-dots
-    position: absolute
-    top: 0
-    right: 0
-    z-index: 1
+.slide__1-image-dots
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 1
 
 .slide__1-title-price
   position: relative
@@ -83,6 +82,7 @@
   img
     display: block
     margin: auto
+
 
 .slide__1-form
   position: relative
@@ -112,30 +112,22 @@
   height: 110px
   @include beveled-corners($red, 0, 15px, 0, 0)
 
-  &::before
-    content: ""
-    position: absolute
-    top: 45px
-    left: 30px
-    background-image: url("/img/arrow.png")
-    width: 19px
-    height: 17px
-    transform: rotate(180deg)
-    cursor: pointer
-
   input
     position: absolute
     cursor: pointer
     display: block
     width: 100%
     height: 100%
+    color: $white
+    font-weight: bold
     background-color: rgba(255, 255, 255, 0)
 
 
 .slide__1-form-dots
   position: absolute
-  right: -55px
-  top: 5px
+  left: -70px
+  bottom: -20px
+  transform: rotate(90deg)
 
 // Slide 2
 .slide__2
@@ -170,62 +162,121 @@
 
 
 
-
-
 .color-red
   color: $red
 
 
+@media screen and (max-width: 1024px)
+  .slider-container
+    padding: 65px 55px 0 55px
+    background-size: cover
+    background-position-x: 50%
 
-@media screen and (max-width: 720px)
   .main-slider
-    padding: 0
+    width: 100%
 
-    .arrow
-      top: 90%
+  .slide__1-title-price
+    position: absolute
+    top: 0
+    right: 0
 
-  .slide__1
-    text-align: center
+  .slide__1-title-price-text
+    padding: 0 15px
 
-    .slide__1-title
-      display: block
+  .slide__1-image
+    top: 125px
+    right: 0
 
-    img
-      width: 100%
-
-  .slide__1-title-price-value
-    width: 200px
-    margin: 30px auto
+  .slide__1-image-dots
+    top: 130px
+    right: 55px
 
   .slide__1-form
-    width: 100%
-    padding: 0
-    display: block
-    box-shadow: none
+    padding-left: 20px
+    width: 60%
+    margin-top: 340px
 
+@media screen and (max-width: 768px)
+  .slider-container
+    padding: 20px 45px 0 45px
+
+  .slide__1-title-price-text
+    padding: 0
+    font-size: 2.5rem
+
+  .slide__1-title-price
+    font-size: 2.2rem
+    width: 210px
+
+  .slide__1-image
+    width: 95%
+
+  .slide__1-image-dots
+    width: 70%
+
+  .main-slider
+    .arrow
+      top: 45%
+
+    .left-arrow
+      left: -35px
+
+    .right-arrow
+      right: -35px
+
+  .slide__1-form
+    width: 75%
+    padding-left: 20px
+
+@media screen and (max-width: 480px)
+  .slide__1-title-price-text
+    font-size: 2.2rem
+
+  .slide__1-title-price
+    font-size: 2rem
+    top: 110px
+    z-index: 4
+
+  .slide__1-image
+    top: 85px
+
+  .slide__1-form
+    margin-top: 200px
+    width: 80%
+    justify-content: flex-end
     input
-      display: block
-      width: 80%
-      margin: 0 auto 20px auto
+      position: absolute
+      left: 20px
+      &[name="name"]
+        top: 15px
+      &[name="phone"]
+        top: 60px
+
+  .slide__1-form-dots
+    display: none
+
+@media screen and (max-width: 320px)
+  .slider-container
+    padding: 5px
+
+  .slide__1-title-price-text
+    font-size: 1.6rem
+
+  .slide__1-image
+    top: 60px
+
+  .slide__1-form
+    margin-top: 140px
 
   .slide__1-form-submit
-    padding: 10px
-    width: 80%
-    height: 20px
-    margin: 20px auto
-    text-align: center
-
-    @include beveled-corners($red, 0, 0, 5px, 0)
+    width: 45px
     &::before
-      content: "перезвонить мне"
-      position: absolute
-      top: 5px
-      left: 0
-      background-image: none
-      width: 100%
-      height: auto
-      transform: none
-      cursor: pointer
-      color: $white
-      font-size: 1.5rem
+      left: 15px
 
+  .main-slider
+    .arrow
+      top: 90%
+    .left-arrow
+      left: 0
+    .right-arrow
+      right: 0

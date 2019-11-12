@@ -123,30 +123,78 @@
   left: -50px
 
 .our-work-slider-nav
-  ul
-    list-style-type: none
-    display: flex
-    justify-content: center
-    li
-      cursor: pointer
-      margin-left: 25px
+  list-style-type: none
+  display: flex
+  justify-content: center
+  li
+    cursor: pointer
+    margin-left: 25px
 
-@media screen and (max-width: 720px)
+@media screen and (max-width: 1024px)
+  .our-work
+    width: 98%
+    padding: 1%
+
+  .our-work-slider
+    .left-arrow
+      left: -20%
+    .right-arrow
+      right: -20%
+
+
+@media screen and (max-width: 768px)
+  .ows-dots
+    display: none
+
   .our-work-slider
     .arrow
-      top: 80%
+      top: 106%
+    .left-arrow
+      left: -10px
+    .right-arrow
+      right: -10px
 
-  .our-work-slider__item-image-wrapper
-    display: block
+  .our-work-slider-nav
+    ul
+      padding: 0 50px
+      li
+        &:first-child
+          margin-left: 0
 
-  .our-work-slider__item-img
-    margin-bottom: 20px
+        img
+          width: 100%
 
-  .our-work-slider__item-before
-    top: 5px
-    left: 5px
+@media screen and (max-width: 480px)
+  .our-work-wrapper
+    padding: 0
 
-  .our-work-slider__item-after
-    top: 90%
-    right: 5px
-    z-index: 10
+  .our-work
+    overflow: hidden
+    margin: 0
+    padding-bottom: 55px
+    h2
+      font-size: 3rem
+
+  .our-work-slider
+    width: 100%
+
+    .arrow
+      top: 115%
+    .left-arrow
+      left: 0
+    .right-arrow
+      right: 0
+
+  .ows-before-stick
+    left: 0
+
+  .ows-after-stick
+    right: 0
+
+  .our-work-slider-nav
+      ul
+        padding: 0
+
+@media screen and (max-width: 320px)
+  .our-work
+    padding-bottom: 75px

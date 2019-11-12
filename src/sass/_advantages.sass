@@ -27,29 +27,72 @@
   align-items: center
   @include beveled-corners($white, 0, 10px, 0, 0)
 
-  .advantages-list__item-sep
-    margin-left: 45px
-    background-color: #f5f5f5
-    width: 2px
-    height: 100%
-
   h3
     text-align: left
     text-transform: uppercase
     margin: 40px 0 40px 25px
 
-  .advantages-list__item-dots
-    position: absolute
-    top: 10px
-    right: -50px
+.advantages-list__item-sep
+  margin-left: 45px
+  background-color: #f5f5f5
+  width: 2px
+  height: 100%
+
+.advantages-list__item-dots
+  position: absolute
+  top: 10px
+  right: -50px
 
 
 @media screen and (max-width: 1024px)
+  .advantages
+    width: 98%
+    padding: 0 1%
+
+  .advantages-list__item-dots
+    display: none
+
+  .advantages-list__item
+    padding: 5px
+    h3
+      margin: 15px 0 15px 10px
+
+  .advantages-list__item-sep
+    margin-left: 10px
+
+@media screen and (max-width: 768px)
+  .advantages-wrapper
+    padding: 20% 0 0 0
+    margin: 0
+
   .advantages-list
     flex-wrap: wrap
 
   .advantages-list__item
-    padding: 5%
-    flex-basis: 90%
-    margin-bottom: 3%
+    padding: 0 0 0 35px
+    margin-bottom: 20px
+    flex-basis: 100%
 
+    h3
+      margin: 40px 0 40px 20px
+
+  .advantages-list__item-sep
+    margin-left: 40px
+
+@media screen and (max-width: 480px)
+  .advantages-wrapper
+    margin-top: -65px
+    padding: 30% 1% 0 1%
+
+  .advantages
+    h2
+      font-size: 3rem
+      margin-bottom: 20px
+
+@media screen and (max-width: 320px)
+  .advantages
+    h2
+      font-size: 2rem
+
+  .advantages-list__item-sep
+    margin-left: 10px

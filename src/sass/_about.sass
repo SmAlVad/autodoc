@@ -47,10 +47,11 @@
     background-color: $bg-color
     transform: rotate(45deg)
 
-  .about__banner-dots
-    position: absolute
-    bottom: -40px
-    left: -45px
+
+.about__banner-dots
+  position: absolute
+  bottom: -40px
+  left: -45px
 
 .about__banner-stick
   position: absolute
@@ -68,3 +69,25 @@
   display: inline-block
   margin-top: 2%
   @include beveled-corners($yellow, 10px, 0, 10px, 0)
+
+@media screen and (max-width: 1024px)
+  .about-wrapper
+    padding: 2% 0 4% 0
+
+  .about
+    width: 98%
+    padding: 1%
+    flex-wrap: wrap
+
+  .about__banner
+    flex-basis: 100%
+
+  .about__text
+    flex-basis: 100%
+    padding: 0
+
+  .about__banner-stick
+    left: -10px
+
+  .about__banner-dots
+    display: none

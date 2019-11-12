@@ -33,9 +33,10 @@
   .active
     @include beveled-corners($red, 5px, 0, 0, 0)
 
-.testimonials-slider__item
+.testimonials-slider__item-content
   display: flex
   justify-content: space-between
+
 
 .ts__item-image-wrapper
   flex-basis: 50%
@@ -47,18 +48,19 @@
 .ts__item-image-car-name
   position: absolute
   top: 25px
-  left: -20px
+  left: 5px
   padding: 7px
   @include beveled-corners($yellow, 5px, 0, 0, 0)
 
 .ts__item-image-text
+  width: 100%
   font-size: 1.2rem
   line-height: 1.5
   color: $white
   position: absolute
   bottom: 0
   left: 0
-  padding: 20px
+  padding: 3%
   background-color: rgba(0, 0, 0, .8)
 
 .ts__item-description
@@ -108,6 +110,11 @@
     .active
       background-color: $red
 
+@media screen and (max-width: 1024px)
+  .testimonials
+    width: 96%
+    padding: 0 2%
+
 @media screen and (max-width: 720px)
   .testimonials-slider__item
     .content
@@ -116,3 +123,44 @@
   .testimonials-slider
     .arrow
       top: 90%
+
+  .testimonials-slider__item-content
+    flex-wrap: wrap
+
+@media screen and (max-width: 480px)
+  .testimonials-wrapper
+    position: relative
+    padding-bottom: 100px
+
+  .testimonials-wrapper
+    padding-top: 0
+
+  .testimonials
+    h2
+      font-size: 3rem
+
+  .testimonials-slider__item
+    flex-wrap: wrap
+
+  .ts__item-image-wrapper
+    flex-basis: 100%
+
+  .ts__item-description
+    flex-basis: 100%
+    padding: 0
+
+  .ts__item-description-images
+    display: none
+
+  .testimonials-slider-dots
+    display: none
+
+  .testimonials-slider-arrow
+    position: absolute
+    bottom: 0
+    right: 20px
+
+@media screen and (max-width: 320px)
+  .ts__item-image-car-name
+    left: -10px
+
